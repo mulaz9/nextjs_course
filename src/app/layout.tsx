@@ -28,6 +28,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-zinc-950 text-zinc-100`}
       >
+        <p className="bg-purple-700 text-white w-full text-center py-2">
+          Sono del layout root
+        </p>
         <Navbar />
         {children}
       </body>

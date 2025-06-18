@@ -1,34 +1,10 @@
 // app/blog/page.tsx
 import Link from "next/link";
+import { blogPosts } from "./data"; // Importa i dati dei post del blog
 
-interface Post {
-  slug: string;
-  title: string;
-  excerpt: string;
-}
+export default async function BlogPage() {
+  await new Promise((resolve) => setTimeout(resolve, 1000)); // Simula un ritardo di caricamento
 
-const blogPosts: Post[] = [
-  {
-    slug: "primo-post",
-    title: "Il mio primo Post",
-    excerpt:
-      "Questo è il mio primo post sul blog. Sono entusiasta di condividere le mie idee e pensieri con voi!",
-  },
-  {
-    slug: "secondo-post",
-    title: "Il mio secondo Post",
-    excerpt:
-      "Questo è il mio secondo post sul blog. Continuo a esplorare e condividere le mie esperienze.",
-  },
-  {
-    slug: "terzo-post",
-    title: "Il mio terzo Post",
-    excerpt:
-      "Questo è il mio terzo post sul blog. Grazie per seguire il mio viaggio!",
-  },
-];
-
-export default function BlogPage() {
   return (
     <div className="max-w-4xl mx-auto p-8">
       <h1 className="text-3xl font-bold mb-8">Blog</h1>
